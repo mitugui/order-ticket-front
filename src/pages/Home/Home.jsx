@@ -1,10 +1,10 @@
-import Card from '../components/Card'
+import CardsConteiner from '../../components/CardsConteiner/index.jsx'
 import Body from './styles.js'
 
 function Home() {
   return (
     <Body>
-      <Card />
+      <CardsConteiner />
     </Body>
   )
 }

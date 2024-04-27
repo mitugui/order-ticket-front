@@ -4,6 +4,7 @@ const CardContainer = styled.div`
     height: 300px;
     width: 250px;
     background-color: #00CD9C;
+    box-shadow: 5px 8px #b3f0e1;
     border-radius: 13px;
     text-align: center;
     position: relative;
