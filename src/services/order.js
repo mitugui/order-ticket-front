@@ -7,6 +7,11 @@ async function getOrders() {
     return response.data
 }
 
+async function deleteOrder(id) {
+    await orderAPI.delete(`/${id}`)
+}
+
 export {
-    getOrders
+    getOrders,
+    deleteOrder
 }
