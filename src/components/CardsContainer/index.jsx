@@ -1,12 +1,12 @@
 import Card from "../Card"
-import { CardsContainer } from "./styles"
+import { Container } from "./styles"
 
-function CardsConteiner() {
+function CardsContainer() {
     return (
-        <CardsContainer>
+        <Container>
             <Card />
-        </CardsContainer>
+        </Container>
     )
 }
 
-export default CardsConteiner
+export default CardsContainer

@@ -7,4 +7,13 @@ const Body = styled.body`
     background-color: #131F24;
 `
 
-export default Body
+const Content = styled.div`
+    display: flex;
+    height: 100%;
+    width: 100%;
+`
+
+export {
+    Body,
+    Content
+}

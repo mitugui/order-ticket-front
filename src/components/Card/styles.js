@@ -3,12 +3,14 @@ import styled from "styled-components";
 const CardContainer = styled.div`
     height: 300px;
     width: 250px;
-    background-color: #00CD9C;
+    /* background-color: #00cd9c; */
+    background: rgb(37,226,174);
+    background: linear-gradient(135deg, rgba(37,226,174,1) 0%, rgba(0,205,156,1) 35%, rgba(0,164,125,1) 88%); 
     box-shadow: 8px 8px #b3f0e1;
     border-radius: 13px;
     text-align: center;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 `
 
 const CardHeader = styled.div`
@@ -68,15 +70,16 @@ const CardDetails = styled.div`
         width: 10px;
     }
     &::-webkit-scrollbar-thumb{
+        display: none;
         border: 1px solid #292929;
-        background-color: #d0d0d0;
+        background-color: transparent;
         border-radius: 20px;
     }
 `
 
 const Orders = styled.ul`
-    height: calc(100% - 10px);
     padding-top: 10px;
+    padding-bottom: 15px;
 `
 
 const Order = styled.li`
@@ -89,7 +92,7 @@ const Order = styled.li`
 `
 
 const ProductInfoSpan = styled.span`
-    font-size: 20px;
+    font-size: 22px;
     color: #1e3945;
     font-weight: bold;
 `

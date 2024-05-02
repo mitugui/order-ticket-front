@@ -1,8 +1,10 @@
 import styled from "styled-components"
 
-const CardsContainer = styled.div`
+const Container = styled.div`
+    margin-top: 125px;
     height: 100%;
-    width: 100%;
+    width: calc(100% - 60px);
+    padding: 0 30px;
     margin-left: 400px;
     gap: 30px;
     display: flex;
@@ -11,5 +13,5 @@ const CardsContainer = styled.div`
 `
 
 export {
-    CardsContainer
+    Container
 }
