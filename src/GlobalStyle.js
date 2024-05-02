@@ -8,5 +8,9 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         border: 0;
     }
+
+    li {
+        list-style-type: none;
+    }
 `
 export default GlobalStyle

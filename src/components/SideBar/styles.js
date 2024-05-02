@@ -43,7 +43,6 @@ const Title = styled.h1`
 `
 
 const Options = styled.ul`
-    list-style-type: none;
     margin-left: 20px;
     margin-top: 50px;
 `

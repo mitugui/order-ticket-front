@@ -56,10 +56,56 @@ const Title = styled.h2`
     white-space: nowrap;
 `
 
+const CardDetails = styled.div`
+    height: calc(100% - 86px);
+    width: calc(100% - 30px);
+    margin: 15px;
+    box-shadow: inset -0.5px 0.5px 7px black;
+    background-color: #b3f0e1;
+    border-radius: 13px;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+        border: 1px solid #292929;
+        background-color: #d0d0d0;
+        border-radius: 20px;
+    }
+`
+
+const Orders = styled.ul`
+    height: calc(100% - 10px);
+    padding-top: 10px;
+`
+
+const Order = styled.li`
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 5px;
+    user-select: none;
+`
+
+const ProductInfoSpan = styled.span`
+    font-size: 20px;
+    color: #1e3945;
+    font-weight: bold;
+`
+
+const Name = styled(ProductInfoSpan)``
+const Quantity = styled(ProductInfoSpan)``
+
 export {
     CardContainer,
     CardHeader,
     NumberContainer,
     Number,
-    Title
+    Title,
+    CardDetails,
+    Orders,
+    Order,
+    Name,
+    Quantity,
 }

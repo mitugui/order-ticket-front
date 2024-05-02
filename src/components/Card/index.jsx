@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { deleteOrder, getOrders } from "../../services/order"
-import { CardContainer, CardHeader, Number, NumberContainer, Title } from "./styles"
+import { CardContainer, CardHeader, Number, NumberContainer, Title, CardDetails, Orders, Order, Name, Quantity } from "./styles"
 import { FaTimes } from "react-icons/fa"
 
 function Card() {
@@ -31,8 +31,18 @@ function Card() {
                                 <Number key={order.id}>{`${order.id}`}</Number>
                             </NumberContainer>
                             <Title key={order.id}>{`${order.name}`}</Title>
-                            <FaTimes onClick={() => removeOrder(order.id)}/>
+                            <FaTimes onClick={() => removeOrder(order.id)} />
                         </CardHeader>
+                        <CardDetails>
+                            <Orders>
+                                {order.items.map(item => (
+                                    <Order>
+                                        <Name>{item.name}</Name>
+                                        <Quantity>{item.quantity}</Quantity>
+                                    </Order>
+                                ))}
+                            </Orders>
+                        </CardDetails>
                     </CardContainer>
                 )) : null
             }
