@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Container = styled.div`
+const CardsContainer = styled.div`
     margin-top: 125px;
     height: 100%;
     width: calc(100% - 60px);
@@ -12,6 +12,4 @@ const Container = styled.div`
     justify-content: center;
 `
 
-export {
-    Container
-}
+export default CardsContainer

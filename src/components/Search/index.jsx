@@ -1,12 +1,18 @@
-import { useState } from "react"
 import { Container, Input } from "./styles"
 
-function Search() {
-    const [search, setSearch] = useState('')
+function Search({onSearch}) {
+    const handleInputChange = (e) => {
+        const searchTerm = e.target.value;
+        onSearch(searchTerm)
+    }
 
     return (
         <Container>
-            <Input type="text" onChange={(e)=> setSearch(e.target.value)} placeholder="Digite o nome de um cliente..."></Input>
+            <Input
+                type="text"
+                placeholder="Digite o nome de um cliente..."
+                onChange={handleInputChange}
+            />
         </Container>
     )
 }

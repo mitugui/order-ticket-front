@@ -1,16 +1,12 @@
-import CardsContainer from '../../components/CardsContainer'
-import Search from '../../components/Search'
+import HomeContent from '../../components/HomeContent'
 import SideBar from '../../components/SideBar'
-import { Body, Content } from './styles.js'
+import { Body } from './styles.js'
 
 function Home() {
   return (
     <Body>
       <SideBar />
-      <Content>
-        <Search />
-        <CardsContainer />
-      </Content>
+      <HomeContent />
     </Body>
   )
 }
