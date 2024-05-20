@@ -7,10 +7,15 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         margin: 0;
         border: 0;
+        font-family: "Poppins", sans-serif;
     }
 
     li {
         list-style-type: none;
+    }
+
+    body{
+        background-color: #131F24;
     }
 `
 export default GlobalStyle
