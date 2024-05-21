@@ -1,15 +1,15 @@
 import { CardContainer, CardHeader, Number, NumberContainer, Title, CardDetails, Orders, Order, Name, Quantity } from "./styles"
 import { FaTimes } from "react-icons/fa"
 
-function OrderCard({ order, removeOrder }) {
+function OrderCard({ order, removeOrder, index }) {
     return (
         <CardContainer>
             <CardHeader>
                 <NumberContainer>
-                    <Number key={order.id}>{`${order.id}`}</Number>
+                    <Number>{`${index + 1}`}</Number>
                 </NumberContainer>
-                <Title key={order.id}>{`${order.name}`}</Title>
-                <FaTimes onClick={() => removeOrder(order.id)} />
+                <Title key={order.clientName}>{`${order.clientName}`}</Title>
+                <FaTimes onClick={() => removeOrder(order._id)} />
             </CardHeader>
             <CardDetails>
                 <Orders>

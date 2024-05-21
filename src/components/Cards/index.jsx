@@ -23,24 +23,30 @@ function Cards({ searchTerm }) {
     }
 
     const filteredOrders = orders.filter((order) =>
-        order.name.toLowerCase().includes(searchTerm.toLowerCase())
+        order.clientName.toLowerCase().includes(searchTerm.toLowerCase())
     )
 
     return (
         <>
             {
-                searchTerm === "" ? orders.length !== 0 ? orders.map(order => (
+                searchTerm === "" ? orders.length !== 0 ? orders.map((order, index) => (
                     <OrderCard
                         order={order}
                         removeOrder={removeOrder}
+                        index={index}
                     />
                 )) : <NoOrdersFoundMessage>Adicione um pedido para aparecer aqui!</NoOrdersFoundMessage>
-                    : filteredOrders.length !== 0 ? filteredOrders.map(order => (
-                        <OrderCard
-                            order={order}
-                            removeOrder={removeOrder}
-                        />
-                    )) : <NoOrdersFoundMessage>Nenhum pedido foi encontrado!</NoOrdersFoundMessage>
+                    : filteredOrders.length !== 0 ? filteredOrders.map(filteredOrder => {
+                        const index = orders.findIndex((order) => order === filteredOrder)
+
+                        return (
+                            <OrderCard
+                                order={filteredOrder}
+                                removeOrder={removeOrder}
+                                index={index}
+                            />
+                        )
+                    }) : <NoOrdersFoundMessage>Nenhum pedido foi encontrado!</NoOrdersFoundMessage>
             }
         </>
     )
